@@ -1,0 +1,11 @@
+genotypename: narac_hg19_filtered.bed
+snpname: narac_hg19_filtered.bim
+indivname: narac_hg19_filtered.fam
+evecoutname: narac.evec
+evaloutname: narac.eval
+altnormstyle: NO
+numoutevec: 10
+numoutlieriter: 2
+numoutlierevec: 8
+outliersigmathresh: 8
+outlieroutname: outliers.removed
