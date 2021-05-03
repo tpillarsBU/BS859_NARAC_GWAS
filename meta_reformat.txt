@@ -1,0 +1,35 @@
+     Show Dotfiles Show Owner/Mode
+/projectnb/bs859/spr21/users/tpillars/final_project/
+# Since we're doing a GWAS, we can estimate genomic control lambda from the analysis,
+# and then adjust each study by its genomic control lambda, 
+# we would uncomment this line:
+#SCHEME   STDERR
+GENOMICCONTROL ON
+
+# To help identify allele flips, it can be useful to track
+# allele frequencies in the meta-analysis.  To do that, we can
+# uncomment the next two lines:
+AVERAGEFREQ ON
+MINMAXFREQ ON
+
+MARKER   NEWCOL
+WEIGHT   N
+ALLELE   A1 A2
+FREQ     AF
+EFFECT   SCORE
+STDERR   VAR
+PVAL     PVAL
+
+PROCESS /projectnb/bs859/spr21/users/tpillars/final_project/finproj_f_newcol.glmm.score.nocov
+
+MARKER   NEWCOL
+WEIGHT   N
+ALLELE   A1 A2
+FREQ     AF
+EFFECT   SCORE
+STDERR   VAR
+PVAL     PVAL
+
+PROCESS /projectnb/bs859/spr21/users/tpillars/final_project/finproj_m_newcol.glmm.score.nocov
+
+ANALYZE HETEROGENEITY
